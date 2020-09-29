@@ -1,0 +1,46 @@
+/*
+  Uses the breakpoint definition from the _variables.scss
+  Example: mq(xs) { color: red; }
+ */
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  }
+}
+
+/*
+ Uses the sizes definition from the _variables.scss
+ Just include spacing in some scss file so that the css classes will be generated
+ These classes have a specificity of 0:3:0
+ */
+@mixin spacing() {
+  @each $prop, $abbrev in (margin: m, padding: p) {
+    @each $key, $size in $sizes {
+      .#{$abbrev}-#{$key}.#{$abbrev}-#{$key}.#{$abbrev}-#{$key} {
+        #{$prop}: $size;
+      }
+      .#{$abbrev}-t-#{$key}.#{$abbrev}-t-#{$key}.#{$abbrev}-t-#{$key} {
+        #{$prop}-top: $size;
+      }
+      .#{$abbrev}-r-#{$key}.#{$abbrev}-r-#{$key}.#{$abbrev}-r-#{$key} {
+        #{$prop}-right: $size;
+      }
+      .#{$abbrev}-b-#{$key}.#{$abbrev}-b-#{$key}.#{$abbrev}-b-#{$key} {
+        #{$prop}-bottom: $size;
+      }
+      .#{$abbrev}-l-#{$key}.#{$abbrev}-l-#{$key}.#{$abbrev}-l-#{$key} {
+        #{$prop}-left: $size;
+      }
+      .#{$abbrev}-v-#{$key}.#{$abbrev}-v-#{$key}.#{$abbrev}-v-#{$key} {
+        #{$prop}-top: $size;
+        #{$prop}-bottom: $size;
+      }
+      .#{$abbrev}-h-#{$key}.#{$abbrev}-h-#{$key}.#{$abbrev}-h-#{$key} {
+        #{$prop}-left: $size;
+        #{$prop}-right: $size;
+      }
+    }
+  }
+}

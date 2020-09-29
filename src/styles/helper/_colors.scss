@@ -1,0 +1,57 @@
+.color--primary.color--primary.color--primary {
+  color: map-get($colors, 'primary');
+}
+.color--secondary.color--secondary.color--secondary {
+  color: map-get($colors, 'secondary');
+}
+.color--error.color--error.color--error {
+  color: map-get($stateColors, 'error');
+}
+.color--warning.color--warning.color--warning {
+  color: map-get($stateColors, 'warning');
+}
+.color--info.color--info.color--info {
+  color: map-get($stateColors, 'info');
+}
+.color--success.color--success.color--success {
+  color: map-get($stateColors, 'success');
+}
+.color--light.color--light.color--light {
+  color: map-get($fontColors, 'light');
+}
+.color--dark.color--dark.color--dark {
+  color: map-get($fontColors, 'dark');
+}
+
+.bg--primary.bg--primary.bg--primary {
+  background: map-get($colors, 'primary');
+  color: map-get($fontColors, 'light');
+}
+.bg--secondary.bg--secondary.bg--secondary {
+  background: map-get($colors, 'secondary');
+  color: map-get($fontColors, 'light');
+}
+.bg--error.bg--error.bg--error {
+  background: map-get($stateColors, 'error');
+  color: map-get($fontColors, 'light');
+}
+.bg--warning.bg--warning.bg--warning {
+  background: map-get($stateColors, 'warning');
+  color: map-get($fontColors, 'light');
+}
+.bg--info.bg--info.bg--info {
+  background: map-get($stateColors, 'info');
+  color: map-get($fontColors, 'light');
+}
+.bg--success.bg--success.bg--success {
+  background: map-get($stateColors, 'success');
+  color: map-get($fontColors, 'light');
+}
+.bg--light.bg--light.bg--light {
+  background: map-get($colors, 'light');
+  color: map-get($fontColors, 'dark');
+}
+.bg--dark.bg--dark.bg--dark {
+  background: map-get($colors, 'dark');
+  color: map-get($fontColors, 'light');
+}

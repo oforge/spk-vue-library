@@ -1,0 +1,80 @@
+/*
+  The awesome css grid based column grid
+  Here is how it works:
+  - Define a <div class="row">
+  - Inside, define <div class="column-x">
+    .column-x is the class name for a column size where x is a number. Per default between 1 and 12.
+    You can override the column size via breakpoint columns. E.g. <div class="column-12 column-m-6 column-l-3">
+    Currently there are only .column-x, .column-m-x and .column-l-x columns defined. If you need more, do it!
+  - If you want to reorder and position columns inside the grid track, you can do it with the .start-at-x class.
+    E.g. <div class="column-6 column-m-4 column-l-2 start-at-6 start-at-m-8 start-at-l-10"> would resize the
+    column from 6 to 4 to 2 and reposition it from position 6 to 8 to 10.
+*/
+
+/*
+  We need to define a custom property so that we know the size of a column,
+  when we want to shift it back and forth
+ */
+:root {
+  --currentColumn: 0;
+}
+
+/*
+  Column generator mixin. The default class is .column-x where x is a number.
+  Default size is 12
+ */
+@mixin columns($column_name: 'column', $amount: 12) {
+  @for $i from 1 through $amount {
+    .#{$column_name}-#{$i} {
+      --currentColumn: #{$i};
+      grid-column: span $i;
+    }
+  }
+}
+
+/*
+  Position the element at a specific column. The default class is .start-at-x where x is a number.
+  Default amount is 12
+ */
+@mixin startAt($order_name: 'start-at', $amount: 12) {
+  @for $i from 1 through $amount {
+    .#{$order_name}-#{$i} {
+      grid-column-start: $i;
+      //TODO: Check if column-end works this way
+      grid-column-end: calc(var(--currentColumn) + #{$i});
+      order: $i;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat($gridColumns, 1fr);
+  gap: $gridGap;
+
+  &--no-gap {
+    gap: 0;
+  }
+}
+.row + .row {
+  margin-top: $gridGap;
+}
+
+@include columns();
+@include startAt();
+
+@include mq('m') {
+  @include columns('column-m');
+}
+
+@include mq('xl') {
+  @include columns('column-l');
+}
+
+@include mq('m') {
+  @include startAt('start-at-m');
+}
+
+@include mq('xl') {
+  @include startAt('start-at-l');
+}

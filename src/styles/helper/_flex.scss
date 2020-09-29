@@ -1,0 +1,41 @@
+/*
+  Flexbox helper classes. Not sure if useful.
+ */
+.flex.flex.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+  &--a-start {
+    align-items: flex-start;
+  }
+  &--a-end {
+    align-items: flex-end;
+  }
+  &--a-center {
+    align-items: center;
+  }
+  &--j-start {
+    justify-content: flex-start;
+  }
+  &--j-end {
+    justify-content: flex-end;
+  }
+  &--j-center {
+    justify-content: center;
+  }
+  &--j-between {
+    justify-content: space-between;
+  }
+  &--j-around {
+    justify-content: space-around;
+  }
+  &--j-evenly {
+    justify-content: space-evenly;
+  }
+  &--center-all {
+    align-items: center;
+    justify-content: center;
+  }
+}

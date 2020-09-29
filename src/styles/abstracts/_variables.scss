@@ -1,0 +1,101 @@
+/*
+  All the variables should be placed here.
+ */
+$breakpoints: (
+  'xxs': 480px,
+  'xs': 560px,
+  's': 640px,
+  'm': 768px,
+  'l': 960px,
+  'xl': 1024px,
+  'xxl': 1216px
+);
+
+$colors: (
+  'primary': #0c3d60,
+  'secondary': #70bed1,
+  'light': #fefefe,
+  'dark': #121212
+);
+
+$greyTones: (
+  'ultraLight': #f4f1f4,
+  'light': #cccccc,
+  'medium': #999999,
+  'dark': #666666,
+  'darker': #333333,
+  'ultraDark': map-get($colors, 'dark')
+);
+
+$stateColors: (
+  'error': #e74c3c,
+  'warning': #f1c40f,
+  'info': #8e10ef,
+  'success': #2ecc71
+);
+
+$fonts: (
+  'title': 'Raleway',
+  'text': 'Arial',
+  'special': 'monospace'
+);
+
+$fontColors: (
+  'dark': map-get($colors, 'dark'),
+  'light': map-get($colors, 'light')
+);
+
+$fontSizes: (
+  'xs': 0.875rem,
+  's': 1rem,
+  'm': 1.25rem,
+  'l': 1.75rem,
+  'xl': 2.5rem,
+  'xxl': 3rem
+);
+
+/*
+  For vertical rythm we need the minimum line-height. Every element should have a multiple of this line-height
+ */
+$baseLineHeight: 1.25rem;
+
+$baseSize: .25rem;
+
+$sizes: (
+  '0': 0,
+  'xs': $baseSize,
+  's': $baseSize * 2,
+  'm': $baseSize * 3,
+  'l': $baseSize * 4,
+  'xl': $baseSize * 6,
+  'xxl': $baseSize * 8
+);
+
+$formSize: map-get($sizes, 'xxl');
+
+$iconSizes: (
+  's': map-get($sizes, 'm'),
+  'm': map-get($sizes, 'l'),
+  'l': map-get($sizes, 'xl')
+);
+
+$shadows: (
+  'xs': 0 0 1px 0 map-get($greyTones, 'darker'),
+  's': 0 0 2px 0 map-get($greyTones, 'darker'),
+  'm': 0 0 4px 0 map-get($greyTones, 'darker'),
+  'l': 0 0 8px 0 map-get($greyTones, 'darker')
+);
+
+$radius: (
+  'xs': $baseSize,
+  's': $baseSize * 2,
+  'm': $baseSize * 3,
+  'l': $baseSize * 4,
+  'xl': $baseSize * 6,
+  'xxl': 100%
+);
+
+$z-indexes: ('toast', 'modal');
+
+$gridColumns: 12;
+$gridGap: map-get($sizes, 's');

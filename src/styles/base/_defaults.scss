@@ -1,0 +1,81 @@
+/*
+  All the default settings should be placed here. Default settings are things like default headings, default fonts, etc...
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: map-get($colors, 'primary');
+  color: map-get($colors, 'light');
+}
+::placeholder {
+  color: map-get($greyTones, 'dark');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+em,
+strong,
+input,
+select,
+option,
+button,
+a,
+label,
+sub, sup {
+  color: map-get($fontColors, 'dark');
+}
+
+h1 {
+  font-size: map-get($fontSizes, 'xl');
+  font-family: map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight * 3;
+}
+h2 {
+  font-size: map-get($fontSizes, 'l');
+  font-family: map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight * 2;
+}
+h3 {
+  font-size: map-get($fontSizes, 'm');
+  font-family: map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight * 2;
+}
+h4,
+h5,
+h6 {
+  font-size: map-get($fontSizes, 's');
+  font-family: map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight;
+  font-weight: bold;
+}
+
+h4,
+h5,
+h6,
+p,
+span,
+em,
+strong,
+input,
+select,
+option,
+button,
+a,
+label,
+sub, sup {
+  font-size: map-get($fontSizes, 's');
+  font-family: map-get($fonts, 'text');
+  line-height: $baseLineHeight;
+}
+sub, sup {
+  font-size: map-get($fontSizes, 'xs');
+}

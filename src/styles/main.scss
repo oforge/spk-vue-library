@@ -1,0 +1,27 @@
+/*
+  Even if we build vue apps, we still have styles that are used globally throughout the whole application. These could be things like
+  css reset, flexbox or spacing helper classes, column grid templates and so on. These styles should not live inside components, because
+  they extend them. The main.scss file is the main source file from where we load all the styles together.
+  We have to find a good order in which we load the files.
+
+  We don't have to load stuff from the abstracts folder, because these styles are loaded via webpack.
+ */
+
+/*
+  First we load the base styles. This should be stuff like css reset and base styles
+ */
+@import 'base/style';
+
+/*
+  Helper classes like .flex for flexbox
+ */
+@import 'helper/style';
+
+/*
+  Layout styles like grid
+ */
+@import 'layout/style';
+/*
+  after all, we include the spacing mixin that was injected from webpack
+ */
+@include spacing();
