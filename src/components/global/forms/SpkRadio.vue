@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue';
-import { baseInputMixin } from '@/mixins/baseInputMixin';
+import { baseInputMixin } from '../../../mixins/baseInputMixin';
 export default Vue.extend({
   name: 'SpkRadio',
   mixins: [baseInputMixin],
