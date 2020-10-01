@@ -2,8 +2,9 @@
 
 ## Project setup
 
-To use vue-library in your project, you have to do the following steps:
-- Inside package.json as dependencs: ``"vue-library": "git+https://github.com/oforge/vue-library.git"``
+To use the vue-library in your project, you have to do the following steps:
+- Inside package.json: Inport as a dependencs: ``"vue-library": "git+https://github.com/oforge/vue-library.git"``
+- npm install
 - Load Plugin inside `src/main.ts`: `import spkStyleguidePlugin from "vue-library";` and use spkStyleguidePlugin as a Vue Plugin
 - Load Styles inside `src/App.vue`: `@import "~vue-library/src/styles/main"`
 - Create a vue.config.json with the following content:
