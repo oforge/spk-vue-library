@@ -35,7 +35,12 @@ const spkStyleguidePlugin: PluginObject<any> = {
     Vue.component('spk-modal', () =>
       import(
         /* webpackChunkName: "globalComponents" */ './components/global/SpkModal.vue'
-      )
+        )
+    );
+    Vue.component('spk-notification', () =>
+      import(
+        /* webpackChunkName: "globalComponents" */ './components/global/SpkNotification.vue'
+        )
     );
     Vue.component('spk-sprite', () =>
       import(

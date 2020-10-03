@@ -1,6 +1,6 @@
 {
   "name": "vue-plugin-test",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "main": "src/spk-styleguide.plugin.ts",
   "typings": "src/spk-styleguide.plugin.d.ts",
@@ -36,5 +36,8 @@
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "vuex": "^3.5.1"
   }
 }
