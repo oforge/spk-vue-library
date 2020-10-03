@@ -1,4 +1,5 @@
 import Vue, { PluginFunction, PluginObject } from 'vue';
+import notificationModule from '../src/store/modules/notifications';
 
 const spkStyleguidePlugin: PluginObject<any> = {
   install() {
@@ -50,4 +51,4 @@ const spkStyleguidePlugin: PluginObject<any> = {
   }
 };
 
-export default spkStyleguidePlugin;
+export {spkStyleguidePlugin, notificationModule};
