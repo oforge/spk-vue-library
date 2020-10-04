@@ -5,7 +5,7 @@
     class="notification-wrapper"
     :class="getSize(size) + ' ' + getPosition(position)"
   >
-    <div class="notification shadow--s" v-for="(notification, index) in notifications" :key="'e' + index">
+    <div class="notification shadow--s" v-for="(notification) in notifications" :key="notification.id">
       <spk-button
         class="notification__close-button button btn--ghost"
         :class="notification.state ? 'color--light' : 'color--dark'"
