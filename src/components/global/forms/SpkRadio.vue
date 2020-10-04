@@ -65,7 +65,7 @@ $controlGap: map-get($sizes, 's');
   &__input--radio {
     border: 1px solid map-get($greyTones, 'light');
     border-radius: map-get($radius, 'xxl');
-    padding: 0 $controlGap;
+    padding: 0;
     height: $formSize / 2;
     width: $formSize / 2;
     &:checked {
