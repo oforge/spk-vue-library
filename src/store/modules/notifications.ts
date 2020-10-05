@@ -2,7 +2,7 @@ import { Module } from 'vuex';
 import { NotificationInterface } from '../../interfaces/notification.interface';
 
 const notifications: NotificationInterface[] = [];
-const notificationModule: Module<{ notifications: NotificationInterface[] }, NotificationInterface> = {
+const notificationModule: Module<any, any> = {
   namespaced: true,
   state: {
     notifications
