@@ -3,49 +3,31 @@ import Vue, { PluginFunction, PluginObject } from 'vue';
 const spkStyleguidePlugin: PluginObject<any> = {
   install() {
     Vue.component('spk-icon', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/SpkIcon.vue'
-      )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/SpkIcon.vue')
     );
     Vue.component('spk-button', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/forms/SpkButton.vue'
-      )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/forms/SpkButton.vue')
     );
     Vue.component('spk-text', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/forms/SpkText.vue'
-        )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/forms/SpkText.vue')
     );
     Vue.component('spk-number', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/forms/SpkNumber.vue'
-        )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/forms/SpkNumber.vue')
     );
     Vue.component('spk-checkbox', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/forms/SpkCheckbox.vue'
-        )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/forms/SpkCheckbox.vue')
     );
     Vue.component('spk-radio', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/forms/SpkRadio.vue'
-        )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/forms/SpkRadio.vue')
     );
     Vue.component('spk-modal', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/SpkModal.vue'
-        )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/SpkModal.vue')
     );
     Vue.component('spk-notification', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/SpkNotification.vue'
-        )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/notification/SpkNotification.vue')
     );
     Vue.component('spk-sprite', () =>
-      import(
-        /* webpackChunkName: "globalComponents" */ './components/global/SpkSprite.vue'
-      )
+      import(/* webpackChunkName: "globalComponents" */ './components/global/SpkSprite.vue')
     );
   }
 };

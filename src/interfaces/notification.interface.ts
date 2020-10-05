@@ -4,4 +4,5 @@ export interface NotificationInterface {
   title: string;
   message: string;
   duration?: number;
+  timeoutId?: number;
 }

@@ -1,3 +1,9 @@
 import { Module } from 'vuex';
-declare const notificationModule: Module<any, any>;
+import { NotificationInterface } from '../../interfaces/notification.interface';
+declare const notificationModule: Module<
+  {
+    notifications: NotificationInterface[];
+  },
+  NotificationInterface
+>;
 export default notificationModule;
