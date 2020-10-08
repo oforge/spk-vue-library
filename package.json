@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "private": true,
   "main": "src/spk-vue-library.ts",
-  "typings": "src/spk-styleguide.plugin.d.ts",
+  "typings": "src/spk-vue-library.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

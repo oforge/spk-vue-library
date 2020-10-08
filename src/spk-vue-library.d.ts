@@ -1,3 +1,6 @@
 import { PluginObject } from 'vue';
-declare const spkVueLibrary: PluginObject<any>;
-export default spkVueLibrary;
+declare const _default: {
+    spkVueLibrary: PluginObject<any>;
+    spkModules: import("vuex").ModuleTree<import("./interfaces/rootState.interface").RootStateInterface>;
+};
+export default _default;
