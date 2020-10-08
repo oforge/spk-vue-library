@@ -31,7 +31,7 @@ const spkStyleguidePlugin: PluginObject<any> = {
       import(/* webpackChunkName: "globalComponents" */ './components/global/SpkSprite.vue')
     );
     if (options && options.$store) {
-      options.$store.registerModule(notificationModule);
+      options.$store.registerModule('notificationModule', notificationModule);
     }
   }
 };
