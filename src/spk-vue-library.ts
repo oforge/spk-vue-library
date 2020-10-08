@@ -1,4 +1,12 @@
 import Vue, {ComponentOptions, PluginObject, VueConstructor} from 'vue';
+import {
+  NotificationsInterface,
+  NotificationInterface,
+  DeviceInterface,
+  deviceOrientations,
+  deviceSizes
+} from './interfaces';
+
 import spkModules from './store';
 
 const spkVueLibrary: PluginObject<any> = {
@@ -33,4 +41,12 @@ const spkVueLibrary: PluginObject<any> = {
   }
 };
 
-export { spkVueLibrary, spkModules };
+export {
+  spkVueLibrary,
+  spkModules,
+  DeviceInterface,
+  NotificationInterface,
+  NotificationsInterface,
+  deviceSizes,
+  deviceOrientations
+};
