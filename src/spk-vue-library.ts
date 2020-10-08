@@ -1,8 +1,8 @@
-import {ComponentOptions, PluginObject, VueConstructor} from 'vue';
+import Vue, {ComponentOptions, PluginObject, VueConstructor} from 'vue';
 import spkModules from './store';
 
-const spkStyleguidePlugin: PluginObject<any> = {
-  install(Vue:VueConstructor<Vue>, options: ComponentOptions<Vue>) {
+const spkVueLibrary: PluginObject<any> = {
+  install(Vue:VueConstructor, options: ComponentOptions<Vue>) {
     Vue.component('spk-icon', () =>
       import(/* webpackChunkName: "globalComponents" */ './components/global/SpkIcon.vue')
     );
@@ -33,4 +33,4 @@ const spkStyleguidePlugin: PluginObject<any> = {
   }
 };
 
-export default { spkStyleguidePlugin, spkModules };
+export default { spkVueLibrary, spkModules };
