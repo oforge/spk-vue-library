@@ -33,4 +33,4 @@ const spkVueLibrary: PluginObject<any> = {
   }
 };
 
-export default { spkVueLibrary, spkModules };
+export { spkVueLibrary, spkModules };
