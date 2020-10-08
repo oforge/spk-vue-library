@@ -1,0 +1,15 @@
+.shadow--0 {
+  box-shadow: none;
+}
+.shadow--s {
+  box-shadow: 0 0 2px 0px map-get($greyTones, 'darker');
+}
+.shadow--m {
+  box-shadow: 0 0 6px 0px map-get($greyTones, 'darker');
+}
+.shadow--l {
+  box-shadow: 0 0 12px 0px map-get($greyTones, 'darker');
+}
+.shadow--xl {
+  box-shadow: 0 0 24px 0px map-get($greyTones, 'darker');
+}

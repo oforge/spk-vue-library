@@ -95,7 +95,7 @@ $radius: (
   'xxl': 100%
 );
 
-$z-indexes: ('toast', 'modal');
+$z-indexes: ('notification', 'modal');
 
 $gridColumns: 12;
 $gridGap: map-get($sizes, 's');

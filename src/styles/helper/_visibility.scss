@@ -1,0 +1,15 @@
+.is-hidden.is-hidden.is-hidden {
+  display: none;
+}
+
+@include mq('m') {
+  .is-hidden--m.is-hidden--m.is-hidden--m {
+    display: none;
+  }
+}
+
+@include mq('xl') {
+  .is-hidden--xl.is-hidden--xl.is-hidden--xl {
+    display: none;
+  }
+}

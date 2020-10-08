@@ -7,7 +7,7 @@
 }
 
 ::selection {
-  background: map-get($colors, 'primary');
+  background: lighten(map-get($colors, 'primary'), 10%);
   color: map-get($colors, 'light');
 }
 ::placeholder {
@@ -30,7 +30,8 @@ option,
 button,
 a,
 label,
-sub, sup {
+sub,
+sup {
   color: map-get($fontColors, 'dark');
 }
 
@@ -71,11 +72,28 @@ option,
 button,
 a,
 label,
-sub, sup {
+sub,
+sup {
   font-size: map-get($fontSizes, 's');
   font-family: map-get($fonts, 'text');
   line-height: $baseLineHeight;
 }
-sub, sup {
+sub,
+sup {
   font-size: map-get($fontSizes, 'xs');
 }
+strong {
+  font-weight: bold;
+}
+a:not(.btn) {
+  color: map-get($colors, 'primary');
+  font-weight: bold;
+
+  &:hover {
+    color: darken(map-get($colors, 'primary'), 5%);
+  }
+  &:active {
+    color: map-get($colors, 'primary');
+  }
+}
+
