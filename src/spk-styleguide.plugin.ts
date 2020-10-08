@@ -1,7 +1,8 @@
-import Vue, { PluginFunction, PluginObject } from 'vue';
+import {PluginObject, VueConstructor} from 'vue';
+import notificationModule from './store/modules/notifications';
 
 const spkStyleguidePlugin: PluginObject<any> = {
-  install() {
+  install(Vue:VueConstructor<Vue>, options) {
     Vue.component('spk-icon', () =>
       import(/* webpackChunkName: "globalComponents" */ './components/global/SpkIcon.vue')
     );
@@ -29,6 +30,9 @@ const spkStyleguidePlugin: PluginObject<any> = {
     Vue.component('spk-sprite', () =>
       import(/* webpackChunkName: "globalComponents" */ './components/global/SpkSprite.vue')
     );
+    if (options && options.$store) {
+      options.$store.registerModule(notificationModule);
+    }
   }
 };
 
