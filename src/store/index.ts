@@ -1,11 +1,11 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
 import notificationModule from './modules/notifications';
+import { ModuleTree } from 'vuex';
+import { RootStateInterface } from '../interfaces/rootState.interface';
+import deviceModule from './modules/device';
 
-Vue.use(Vuex);
+const spkModules: ModuleTree<RootStateInterface> = {
+  notificationModule,
+  deviceModule
+};
 
-export default new Vuex.Store({
-  modules: {
-    notificationModule
-  }
-});
+export default spkModules;

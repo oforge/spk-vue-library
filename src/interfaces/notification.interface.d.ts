@@ -6,3 +6,6 @@ export interface NotificationInterface {
     duration?: number;
     timeoutId?: number;
 }
+export interface NotificationsInterface {
+    notifications: NotificationInterface[];
+}
