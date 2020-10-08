@@ -6,7 +6,6 @@ import {
   deviceOrientations,
   deviceSizes
 } from './interfaces';
-import deviceMixin from './mixins/deviceMixin';
 
 import spkModules from './store';
 
@@ -49,6 +48,5 @@ export {
   NotificationInterface,
   NotificationsInterface,
   deviceSizes,
-  deviceOrientations,
-  deviceMixin
+  deviceOrientations
 };
