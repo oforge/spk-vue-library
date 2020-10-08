@@ -1,4 +1,5 @@
 import {ComponentOptions, PluginObject, VueConstructor} from 'vue';
+import spkModules from './store';
 
 const spkStyleguidePlugin: PluginObject<any> = {
   install(Vue:VueConstructor<Vue>, options: ComponentOptions<Vue>) {
@@ -32,4 +33,4 @@ const spkStyleguidePlugin: PluginObject<any> = {
   }
 };
 
-export default spkStyleguidePlugin;
+export default { spkStyleguidePlugin, spkModules };

@@ -1,33 +1,29 @@
-# vue-plugin-test
+# spk-vue-library
 
 ## Project setup
 
 To use the vue-library in your project, you have to do the following steps:
-- Inside package.json: Inport as a dependencs: ``"vue-library": "git+https://github.com/oforge/vue-library.git"``
-- npm install
-- Load Plugin inside `src/main.ts`: `import spkStyleguidePlugin from "vue-library";` and use spkStyleguidePlugin as a Vue Plugin
-- Load Styles inside `src/App.vue`: `@import "~vue-library/src/styles/main"`
-- Create a vue.config.json with the following content:
+- Inside `package.json`, import spk-vue-library as a dependency: ``"spk-vue-library": "git+https://github.com/oforge/spk-vue-library.git"``
+- `npm install` or npm `install spk-vue-library`
+- Load the Plugin inside `src/main.ts`: `import { spkVueLibrary } from 'spk-vue-library';` 
+- Use `spkVueLibrary` as a Vue Plugin inside `src/main.ts`: `Vue.use(spkVueLibrary);`
+- Load Styles inside `src/App.vue`: `@import '~spk-vue-library/src/styles/main';`
+- Create a `vue.config.js` file inside the root folder with the following content:
     ```js 
-     /*
-      In this file you have the possibility to alter the webpack behaviour. In our case we want to create special sass files,
-      like variables or mixins, that are used globally. Therefore we extended the project with the sass-loader npm module.
-      This module lets us load scss files globally before all the other files.
-      In this example we load the variables and mixins.
-      It is important, that only files that don't generate css should be used here. Otherwise the generated css would be
-      injected multiple times.
-     */
     module.exports = {
       css: {
         loaderOptions: {
           scss: {
-            /*
-              Important: When we refactor the css files and change the folder structure, we have to keep in mind that we have to
-              change the injection here as well.
-             */
-            prependData: '@import "~vue-library/src/styles/abstracts/_style.scss";'
+            prependData: '@import "~spk-vue-library/src/styles/abstracts/_style.scss";'
           }
         }
       }
     };
-Thats all, folks.
+To make use of the Plugin's store Modules, you have to import and use them inside your App's Vuex store.
+- Inside the `./src/store/index.ts` file you import the Plugin Modules: `@import { spkModules } from 'spk-vue-library';`
+- Then inside your store object, add the modules to your store:
+    ```js
+    ...
+    modules: {
+      ...spkModules
+    }

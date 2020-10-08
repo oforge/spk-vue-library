@@ -1,6 +1,6 @@
 {
-  "name": "vue-plugin-test",
-  "version": "0.0.2",
+  "name": "spk-vue-library",
+  "version": "0.0.3",
   "private": true,
   "main": "src/spk-styleguide.plugin.ts",
   "typings": "src/spk-styleguide.plugin.d.ts",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oforge/vue-library.git"
+    "url": "git+https://github.com/oforge/spk-vue-library.git"
   },
   "author": "der alex",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oforge/vue-library/issues"
+    "url": "https://github.com/oforge/spk-vue-library/issues"
   },
-  "homepage": "https://github.com/oforge/vue-library#readme",
+  "homepage": "https://github.com/oforge/spk-vue-library#readme",
   "devDependencies": {
     "vue": "^2.6.11",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
