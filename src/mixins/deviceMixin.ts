@@ -1,5 +1,5 @@
 import Vue from 'vue';
-export default Vue.extend({
+export default Vue.mixin(new Vue({
   mounted() {
     this.$nextTick(function() {
       window.addEventListener('resize', this.setDeviceWidth);
@@ -14,4 +14,4 @@ export default Vue.extend({
   beforeDestroy() {
     window.removeEventListener('resize', this.setDeviceWidth);
   }
-});
+}));
