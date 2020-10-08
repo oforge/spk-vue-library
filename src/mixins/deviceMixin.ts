@@ -1,5 +1,5 @@
 import Vue from 'vue';
-export default Vue.mixin(new Vue({
+const deviceMixin = Vue.mixin(new Vue({
   mounted() {
     this.$nextTick(function() {
       window.addEventListener('resize', this.setDeviceWidth);
@@ -15,3 +15,5 @@ export default Vue.mixin(new Vue({
     window.removeEventListener('resize', this.setDeviceWidth);
   }
 }));
+
+export default deviceMixin;
