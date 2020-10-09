@@ -1,12 +1,4 @@
-export declare enum deviceSizes {
-    mobile = 0,
-    tablet = 1,
-    desktop = 2
-}
-export declare enum deviceOrientations {
-    portrait = 0,
-    landscape = 1
-}
+import { deviceSizes, deviceOrientations } from './device.enum';
 export interface DeviceInterface {
     deviceSize: deviceSizes;
     deviceOrientation: deviceOrientations;

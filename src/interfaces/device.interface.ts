@@ -1,13 +1,4 @@
-export enum deviceSizes {
-  mobile,
-  tablet,
-  desktop
-}
-
-export enum deviceOrientations {
-  portrait,
-  landscape
-}
+import { deviceSizes, deviceOrientations } from './device.enum';
 
 export interface DeviceInterface {
   deviceSize: deviceSizes;

@@ -1,5 +1,6 @@
 import { Module } from 'vuex';
-import { DeviceInterface, deviceOrientations, deviceSizes } from '../../interfaces/device.interface';
+import { deviceSizes, deviceOrientations } from '../../interfaces/device.enum';
+import { DeviceInterface } from '../../interfaces/device.interface';
 import { RootStateInterface } from '../../interfaces/rootState.interface';
 
 const deviceModule: Module<DeviceInterface, RootStateInterface> = {
