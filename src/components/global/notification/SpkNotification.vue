@@ -73,7 +73,7 @@ export default Vue.extend({
   bottom: 0;
   width: 320px;
   padding: map-get($sizes, s);
-  z-index: z('toast');
+  z-index: z('notification');
   pointer-events: none;
 }
 .notification {
