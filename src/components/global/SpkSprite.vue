@@ -16,6 +16,7 @@
       <path d="M10 14.3l17 17.2 4.7-4.6L4.7.5.3 4.9z" />
       <path d="M14.5 22L31.7 5 27.1.3.7 27.3l4.4 4.4z" />
     </symbol>
+    <slot></slot>
   </svg>
 </template>
 
