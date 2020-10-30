@@ -3,15 +3,26 @@
   Here we simply use the button with a slot so that every parent component can alter it easily.
 -->
 <template>
-  <button class="btn">
-    <slot><span>Submit</span></slot>
+  <button class="btn" :disabled="loading" :class="loading ? 'is-loading' : ''">
+    <spk-loader :class="darkLoader ? 'spk-loader--dark' : ''"></spk-loader>
+    <span :class="loading ? 'is-invisible' : ''"><slot><span>Submit</span></slot></span>
   </button>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-  name: 'SpkButton'
+  name: 'SpkButton',
+  props: {
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    darkLoader: {
+      type: Boolean,
+      default: false
+    }
+  }
 });
 </script>
 
