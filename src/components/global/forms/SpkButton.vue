@@ -4,7 +4,7 @@
 -->
 <template>
   <button class="btn" :disabled="loading" :class="loading ? 'is-loading' : ''">
-    <spk-loader :class="darkLoader ? 'spk-loader--dark' : ''"></spk-loader>
+    <spk-loader :class="darkLoader ? 'spk-loader--dark' : ''" v-if="loading"></spk-loader>
     <span class="flex flex--a-center" :class="loading ? 'is-invisible' : ''"><slot><span>Submit</span></slot></span>
   </button>
 </template>
