@@ -35,6 +35,9 @@ const spkVueLibrary: PluginObject<any> = {
     Vue.component('spk-notification', () =>
       import(/* webpackChunkName: "globalComponents" */ './components/global/notification/SpkNotification.vue')
     );
+    Vue.component('spk-loader', () =>
+      import(/* webpackChunkName: "globalComponents" */ './components/global/SpkLoader.vue')
+    );
     Vue.component('spk-sprite', () =>
       import(/* webpackChunkName: "globalComponents" */ './components/global/SpkSprite.vue')
     );

@@ -1,6 +1,6 @@
 {
   "name": "spk-vue-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": true,
   "main": "src/spk-vue-library.ts",
   "typings": "src/spk-vue-library.d.ts",
