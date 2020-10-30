@@ -1,6 +1,9 @@
 .is-hidden.is-hidden.is-hidden {
   display: none;
 }
+.is-invisible.is-invisible.is-invisible {
+  visibility: hidden;
+}
 
 @include mq('m') {
   .is-hidden--m.is-hidden--m.is-hidden--m {
