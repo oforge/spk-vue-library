@@ -54,7 +54,7 @@ const deviceModule: Module<DeviceInterface, RootStateInterface> = {
       const sizesKeys: (keyof SimpleDeviceSizeInterface)[] = Object.keys(sizes) as ((keyof SimpleDeviceSizeInterface)[]);
       
       sizesKeys.forEach(size => {
-        if (deviceWidth <= sizes[size] ) {
+        if (sizes[size] <= deviceWidth) {
           simpleSize = size.toString();
         }
       });
