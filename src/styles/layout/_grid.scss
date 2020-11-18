@@ -63,23 +63,42 @@
 @include columns();
 @include startAt();
 
+@include mq('xs') {
+  @include columns('column-xs');
+}
+
 @include mq('s') {
   @include columns('column-s');
-
 }
 
 @include mq('m') {
   @include columns('column-m');
 }
 
-@include mq('xl') {
+@include mq('l') {
   @include columns('column-l');
+}
+
+@include mq('xl') {
+  @include columns('column-xl');
+}
+
+@include mq('xs') {
+  @include startAt('start-at-xs');
+}
+
+@include mq('s') {
+  @include startAt('start-at-s');
 }
 
 @include mq('m') {
   @include startAt('start-at-m');
 }
 
-@include mq('xl') {
+@include mq('l') {
   @include startAt('start-at-l');
+}
+
+@include mq('xl') {
+  @include startAt('start-at-xl');
 }
