@@ -14,24 +14,7 @@
   color: map-get($greyTones, 'dark');
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-em,
-strong,
-input,
-select,
-option,
-button,
-a,
-label,
-sub,
-sup {
+body {
   color: map-get($fontColors, 'dark');
 }
 
